@@ -5,6 +5,7 @@
     margin: 0 auto;
     padding: 0;
     position: relative;
+    background-color: brown;
 }
 .main_engin_body,
 .assembler,
@@ -12,7 +13,7 @@
 .propelar,
 .propelar_r1,
 .propelar_r2{
-   transition-duration: 3s;
+   transition-duration: .1s;
     
 }
 .main_engin_body{
@@ -37,7 +38,7 @@
     position: absolute;
     opacity: 1;
     left: -200px;
-    top: 310px;
+    top: 320px;
     transform: rotate(90deg);
     /* border: 2px solid red; */
   
@@ -79,7 +80,7 @@
     position: absolute;
     left: 618px;
     bottom: 278px;
-    
+
     opacity: 1;
     transition-delay: .1s;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -87,12 +88,14 @@
 .drone_propelar:hover .propelar{
     position: absolute;
     left: 285px;
-    bottom: 300px;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
     opacity: 1;
     transition-delay: .15s;
     transform: rotate(0deg);
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 9;
+    animation: img 3s linear infinite;
 }
 .drone_propelar:hover .propelar_r1{
 
@@ -115,19 +118,18 @@
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 9;
 }
-.scrue img,
-.propelar img,
-.propelar_r1 img,
-.propelar_r2 img{
-    
-    animation: img 8s linear infinite;
-}
+/* .drone_propelar img:hover {
+    animation: img 3s linear infinite;
+} */
+/* .propelar_r1 img:hover{
+    animation: img 3s linear infinite;
+} */
 
-@keyframes rotate{
+@keyframes img{
     0%{
-        transform: rotate(0deg);
+        transform: rotateY(0deg);
     }
     100%{
-        transform: rotate(360deg);
+        transform: rotateY(-360deg);
     }
 }
